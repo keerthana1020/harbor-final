@@ -10,4 +10,4 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: gp3-csi
   hostPath:
-    path: /etc/core/app.conf
+    path: /etc/jobservice/config.yml
