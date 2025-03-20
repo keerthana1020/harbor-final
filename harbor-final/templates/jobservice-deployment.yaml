@@ -21,7 +21,7 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - name: config-volume
-          mountPath: /etc/jobservice/config.yml
+          mountPath: /etc/core/app.conf
       volumes:
       - name: config-volume
         configMap:
