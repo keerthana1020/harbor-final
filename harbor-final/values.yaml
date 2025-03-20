@@ -1,0 +1,43 @@
+service:
+  type: LoadBalancer
+  port: 80
+  nodePort: 30080
+  annotations: {}
+
+global:
+  storageClass: gp3-csi
+
+persistence:
+  enabled: true
+  storageClass: gp3-csi
+  size: 50Gi
+
+database:
+  type: external
+  external:
+    host: postgres
+    port: 5432
+    database: harbor
+    username: harbor
+    password: harbor123
+
+redis:
+  enabled: true
+  persistence:
+    enabled: true
+    storageClass: gp3-csi
+    size: 8Gi
+
+trivy:
+  enabled: true
+  storageClass: gp3-csi
+  persistence:
+    enabled: true
+    size: 5Gi
+
+registry:
+  enabled: true
+  persistence:
+    enabled: true
+    size: 50Gi
+    storageClass: gp3-csi
