@@ -27,7 +27,7 @@ spec:
         - name: POSTGRES_DB
           value: harbor
         volumeMounts:
-        - mountPath: /var/lib/postgresql/data
+        - mountPath: /data/postgres
           name: postgres-storage
       volumes:
       - name: postgres-storage
