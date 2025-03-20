@@ -2,7 +2,7 @@ apiVersion: v2
 kind: Secret
 metadata:
   name: harbor-tls
-  namespace: harbor
+  namespace: harbor-final
 type: kubernetes.io/tls
 data:
   tls.crt: <base64_encoded_cert>
