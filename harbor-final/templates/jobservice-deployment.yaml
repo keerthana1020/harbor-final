@@ -21,7 +21,7 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - name: config-volume
-          mountPath: /etc/core/app.conf
+          mountPath: /data/harbor/jobservice
       volumes:
       - name: config-volume
         configMap:
