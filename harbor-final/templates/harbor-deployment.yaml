@@ -23,7 +23,7 @@ spec:
         - name: config-volume
           mountPath: /etc/core/app.conf
         - name: data-volume
-          mountPath: /data
+          mountPath: /data/harbor
       volumes:
       - name: config-volume
         configMap:
