@@ -1,5 +1,5 @@
 apiVersion: v2
 name: harbor
-version: 2.12.2
+version: "latest"
 description: A Helm chart for deploying Harbor 2.12.2 with PostgreSQL 15 and Trivy
 type: application
