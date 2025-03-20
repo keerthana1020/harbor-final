@@ -41,3 +41,39 @@ registry:
     enabled: true
     size: 50Gi
     storageClass: gp3-csi
+
+jobservice:
+  enabled: true
+  persistence:
+    enabled: true
+    size: 10Gi
+    storageClass: gp3-csi
+
+# Additional PVs for Job Service and Registry
+persistence:
+  enabled: true
+  persistentVolumeClaim:
+    registry:
+      existingClaim: registry-pvc
+    jobservice:
+      existingClaim: jobservice-pvc
+
+# External Redis Configuration
+externalRedis:
+  host: harbor-redis
+  port: 6379
+  coreDatabaseIndex: 0
+  jobserviceDatabaseIndex: 1
+  registryDatabaseIndex: 2
+  chartmuseumDatabaseIndex: 3
+  password: ""
+
+# Core Settings
+core:
+  cache:
+    enabled: true
+    store: "redis"
+  redis:
+    host: harbor-redis
+    port: 6379
+    password: ""
