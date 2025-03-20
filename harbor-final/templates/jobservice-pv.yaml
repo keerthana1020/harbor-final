@@ -11,4 +11,4 @@ spec:
     - ReadWriteOnce
   storageClassName: gp3-csi
   hostPath:
-    path: /data/harbor/jobservice
+    path: /etc/core/app.conf
